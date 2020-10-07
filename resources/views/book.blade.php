@@ -13,8 +13,5 @@
     <input type="number" id="phone" name="phone"><br><br>
 
     <input type="submit" value="Submit">
-
-
   </form>
 
-  <!-- Need to add avatar -->

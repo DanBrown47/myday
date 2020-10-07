@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/about', function () {return view('welcome');});
 Route::get('/', function () {return view('index');});
 Route::get('/book', function () {return view('book');});
+Route::post('/booked','BookingController@Register');
 
