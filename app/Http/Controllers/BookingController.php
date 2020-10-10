@@ -23,7 +23,7 @@ class BookingController extends Controller
         $link_pvt = $fname.'_'.mt_rand(1000000,9999999);
         $data = array('fname'=>$fname,'lname'=>$lname,'email'=>$email,'phone'=>$phone,'birthday'=>$bday, 'timestamp'=>$now, 'share'=>$link_pub, 'view'=>$link_pvt);
         DB::table('BDays')->insert($data);
-        return $link_pvt.$link_pub;
+        return view('links', compact('fname','bday','link_pub','link_pvt'));
 
     }
 }
