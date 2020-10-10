@@ -1,5 +1,5 @@
 <form action="/booked" method="POST">
-
+    @csrf
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname"><br><br>
 
@@ -11,6 +11,9 @@
 
     <label for="phone">Phone:</label>
     <input type="number" id="phone" name="phone"><br><br>
+
+    <label for="Bday">Birthday on:</label>
+    <input type="date" id="bday" name="bday"><br><br>
 
     <input type="submit" value="Submit">
   </form>
