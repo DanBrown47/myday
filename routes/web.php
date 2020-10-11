@@ -20,3 +20,7 @@ Route::get('/book', function () {return view('book');});
 Route::post('/admin',function(){return dd("GET.. OUT IN PROGRESS");});
 Route::post('/booked','BookingController@Register');
 Route::get('/links',function(){return view('links');});
+
+//Referals
+Route::get('/view/{link_pvt}', ['uses' =>'BookingController@View']);
+// Route::get('/wish/{link_pub}',['uses'])

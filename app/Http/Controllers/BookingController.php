@@ -26,4 +26,8 @@ class BookingController extends Controller
         return view('links', compact('fname','bday','link_pub','link_pvt'));
 
     }
+
+    public function View($link_pvt){
+    dd($link_pvt);
+}
 }
