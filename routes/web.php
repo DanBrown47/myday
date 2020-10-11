@@ -23,4 +23,4 @@ Route::get('/links',function(){return view('links');});
 
 //Referals
 Route::get('/view/{link_pvt}', ['uses' =>'BookingController@View']);
-// Route::get('/wish/{link_pub}',['uses'])
+// Route::get('/wish/{link_pub}',['uses'=>]);

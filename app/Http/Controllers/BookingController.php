@@ -27,7 +27,4 @@ class BookingController extends Controller
 
     }
 
-    public function View($link_pvt){
-    dd($link_pvt);
-}
 }
