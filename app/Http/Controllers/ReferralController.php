@@ -1,16 +1,33 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ReferralController extends Controller
 {
-    public function View($link_pvt){
-        dd($link_pvt);
+    public function Wish_check($link_pub){ //Add Checker for Date
+        $checker = DB::table('BDays')->where('share',$link_pub)->value('id');
+        if($checker){
+        $fname = DB::table('BDays')->where('share',$link_pub)->value('fname');
+        $bday = DB::table('BDays')->where('share',$link_pub)->value('birthday');
+
+        return view('wish', compact('fname','bday','link_pub',));
+        }
+        else{
+        return "Nothing Found";
+        }
     }
 
     public function Wish($link_pub){
         dd($link_pub);
     }
+
+    public function View($link_pvt){
+        dd($link_pvt);
+    }
+
+
+
+
 }
