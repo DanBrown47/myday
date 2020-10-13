@@ -19,9 +19,14 @@ class ReferralController extends Controller
         }
     }
 
-    public function Wish($link_pub){
-        dd($link_pub);
+    public function Wish(Request $request){
+        dd($request);
+        $message=$request->Message;
+
+
     }
+
+
 
     public function View($link_pvt){
         dd($link_pvt);
