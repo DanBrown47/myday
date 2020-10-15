@@ -7,10 +7,10 @@
         @csrf
         <p>Your Name: </p>
         <input type="text" name="name" required ><br><br>
-        <button name="Message" type="submit"  value="Many MAny happy returns of the">Hoi</button><br><br>
-        <button name="Message" type="submit" value="Message2">Hol</button><br><br>
+        <input type="hidden" name="link_pvt" value="{{$link_pub}}">
+        <button name="default-message" type="submit"  value="Many MAny happy returns of the">Hoi</button><br><br>
         Custom
-        <input type="text" name="Message"><br><br>
+        <input type="text" name="Custom-message"><br><br>
         <input type="submit" value="submit">
 
     </form>
