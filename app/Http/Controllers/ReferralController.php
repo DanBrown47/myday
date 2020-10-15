@@ -21,12 +21,20 @@ class ReferralController extends Controller
 
     public function Wish(Request $request){
         dd($request);
-        $message=$request->Message;
+        $name=$request->name;
+        $link_pub=$request->link_pub;
+        $link_pvt = DB::table('BDays')->where('share',$link_pub)->value('view');
+        if($request->default_message){
+            $Message=$request->default_message;
+        }
+        else{
+            $Message=$request->custom_message;
+        }
+        $data = array('name'=>$name,'share'=>$link_pub,'view'=>'$link_pvt');
 
+        DB::table('MsdDB')->insert($data);
 
     }
-
-
 
     public function View($link_pvt){
         dd($link_pvt);
