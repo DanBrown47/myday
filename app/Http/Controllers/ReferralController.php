@@ -20,7 +20,6 @@ class ReferralController extends Controller
     }
 
     public function Wish(Request $request){
-        dd($request);
         $name=$request->name;
         $link_pub=$request->link_pub;
         $link_pvt = DB::table('BDays')->where('share',$link_pub)->value('view');
@@ -30,14 +29,17 @@ class ReferralController extends Controller
         else{
             $Message=$request->custom_message;
         }
-        $data = array('name'=>$name,'share'=>$link_pub,'view'=>'$link_pvt');
-
+        $data = array('name'=>$name,'share'=>$link_pub,'view'=>$link_pvt,'Message'=>$Message);
         DB::table('MsdDB')->insert($data);
+        return "Thank you !";
 
     }
 
     public function View($link_pvt){
         dd($link_pvt);
+        $name = DB::table('MsdDB')->where('view',$link_pvt)->value('name');
+        $Message = DB::table('MsdDB')->where('view',$link_pvt)->value('Message');
+
     }
 
 
