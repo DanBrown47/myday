@@ -11,7 +11,6 @@ class ReferralController extends Controller
         if($checker){
         $fname = DB::table('BDays')->where('share',$link_pub)->value('fname');
         $bday = DB::table('BDays')->where('share',$link_pub)->value('birthday');
-
         return view('wish', compact('fname','bday','link_pub',));
         }
         else{
@@ -36,10 +35,13 @@ class ReferralController extends Controller
     }
 
     public function View($link_pvt){
-        dd($link_pvt);
-        $name = DB::table('MsdDB')->where('view',$link_pvt)->value('name');
-        $Message = DB::table('MsdDB')->where('view',$link_pvt)->value('Message');
 
+        $user_all_msgs = DB::table('MsdDB')
+        ->select(DB::raw('name, Message'))
+        ->where('view',$link_pvt)
+        ->get();
+
+        return view('view', compact('user_all_msgs'));
     }
 
 
