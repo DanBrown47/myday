@@ -11,7 +11,7 @@ class ReferralController extends Controller
         if($checker){
         $fname = DB::table('BDays')->where('share',$link_pub)->value('fname');
         $bday = DB::table('BDays')->where('share',$link_pub)->value('birthday');
-        return view('wish', compact('fname','bday','link_pub',));
+        return view('wish', compact('fname','bday','link_pub'));
         }
         else{
         return "Nothing Found";

@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <head><title>Yo</title>
     </head>
     <body>
         @foreach($user_all_msgs as $fields)
@@ -9,8 +9,6 @@
             <h5>{{ $fields -> Message }}</h5>
             <br>
         </tr>
-
-
         @endforeach
 
     </body>
