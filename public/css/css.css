@@ -1,0 +1,102 @@
+body,
+html {
+  font-family: "Sansita Swashed", cursive;
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header #nav-bar {
+  z-index: 1;
+}
+
+header a {
+  font-size: 22px;
+  color: #ffffff !important;
+  letter-spacing: 2px;
+}
+
+.home-section{
+  padding-top: 300px;
+}
+
+/* dob register page */
+.dob-register-section {
+  padding-top: 200px;
+}
+
+.dob-register-section form {
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: solid 2px #6c757d;
+}
+
+/* wish page */
+.wish-page {
+  padding-top: 100px;
+}
+
+.wish-page #wishes-row {
+  padding-top: 50px;
+}
+
+.wish-page .birthday-guy {
+  color: #363131;
+}
+
+.wish-page .wishes-button {
+  border-radius: 15px;
+  border: solid 2px #6c757d;
+  font-size: 22px;
+}
+
+.wish-page label {
+  font-size: 22px;
+  font-weight: bold;
+  color: #363131;
+}
+
+.wish-page #custom-wish {
+  color: #ffffff;
+  border-radius: 15px;
+  border: solid 2px #6c757d;
+
+}
+
+.wish-page #submit-btn {
+  font-size: 22px;
+  border-radius: 15px;
+}
+
+/* see view page */
+.see-view-page label {
+  font-size: 22px;
+  font-weight: bold;
+  color: #363131;
+}
+
+.see-view-page input {
+  border-radius: 15px;
+  border: solid 2px #6c757d;
+  font-size: 22px;
+}
+
+/* wishes bank page */
+.wishes-bank .name {
+  font-size: 34px;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.wishes-bank .message-box {
+  background-color: #6c757d;
+  border-radius: 10px;
+  box-shadow:hsl(0, 0%, 80%) 0 0 8px;
+}
+
+.wishes-bank .message-box p {
+  font-size: 34px;
+  color: #ffffff;
+}
